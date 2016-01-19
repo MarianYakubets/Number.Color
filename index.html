@@ -36,6 +36,7 @@
 	<script src="src/Preloader.js"></script>
 	<script src="src/MainMenu.js"></script>
 	<script src="src/Game.js"></script>
+	<script src="src/Grid.js"></script>
 </head>
 <body>
 
@@ -57,6 +58,7 @@
 	game.state.add('Preloader', BasicGame.Preloader);
 	game.state.add('MainMenu', BasicGame.MainMenu);
 	game.state.add('Game', BasicGame.Game);
+	game.state.add('Grid', BasicGame.Grid);
 
 	//	Now start the Boot state.
 	game.state.start('Boot');
