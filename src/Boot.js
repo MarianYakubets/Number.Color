@@ -11,8 +11,7 @@ BasicGame = {
 
 };
 
-BasicGame.Boot = function (game) {
-};
+BasicGame.Boot = function (game) {};
 
 BasicGame.Boot.prototype = {
 
@@ -26,8 +25,7 @@ BasicGame.Boot.prototype = {
             this.scale.setMinMax(480, 260, 1024, 768);
             this.scale.pageAlignHorizontally = true;
             this.scale.pageAlignVertically = true;
-        }
-        else {
+        } else {
             this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
             this.scale.setMinMax(480, 260, 1024, 768);
             this.scale.pageAlignHorizontally = true;
@@ -44,6 +42,23 @@ BasicGame.Boot.prototype = {
 
         //  Here we load the assets required for our preloader (in this case a background and a loading bar)
         this.load.image('block', 'images/orientation.jpg');
+
+        this.game.create.texture('blue', this.createSquare('blue', 64, "D"), 1);
+        this.game.create.texture('grey', this.createSquare('grey', 64, "1"), 1);
+        this.game.create.texture('yellow', this.createSquare('yellow', 64, "8"), 1);
+        this.game.create.texture('green', this.createSquare('green', 64, "A"), 1);
+    },
+
+    createSquare: function(name, size, color) {
+        var sq = []
+        for (var i = 0; i < size; i++) {
+            var line = "";
+            for (var j = 0; j < size; j++) {
+                line += color;
+            }
+            sq.push(line);
+        }
+        return sq;
     },
 
     create: function () {
