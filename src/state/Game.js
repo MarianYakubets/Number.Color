@@ -20,11 +20,8 @@ BasicGame.Game = function (game) {
 BasicGame.Game.prototype = {
 
     create: function () {
-        this.game.add.sprite(750, 550, TILE.BLUE.image);
-        this.game.add.sprite(750, 100, TILE.GREEN.image);
-        this.game.add.sprite(100, 550, TILE.GREY.image);
-        this.game.add.sprite(0, 550, TILE.YELLOW.image);
-
+        var grid = new Grid(this.game);
+        grid.draw();
     },
 
     update: function () {
