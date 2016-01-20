@@ -13,11 +13,11 @@ function Grid(game) {
                 group.create(i * size, j * size, getRandomTile());
             }
         }
-    }
+    };
 
     function getRandomTile() {
         var tileTypes = Object.keys(TILE);
         return TILE[tileTypes[Math.floor(Math.random() * tileTypes.length)]].image;
     }
 
-};
+}

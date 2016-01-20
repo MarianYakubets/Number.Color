@@ -1,11 +1,11 @@
-BasicGame.MainMenu = function (game) {
+NumberColor.MainMenu = function (game) {
 
     this.music = null;
     this.playButton = null;
 
 };
 
-BasicGame.MainMenu.prototype = {
+NumberColor.MainMenu.prototype = {
 
     create: function () {
 

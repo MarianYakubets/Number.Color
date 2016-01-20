@@ -1,4 +1,4 @@
-BasicGame.Grid = function (game) {
+NumberColor.Grid = function (game) {
 
     //	When a State is added to Phaser it automatically has the following properties set on it, even if they already exist:
 
@@ -785,7 +785,7 @@ function paint(pointer) {
 }
 };
 
-BasicGame.Grid.prototype = {
+NumberColor.Grid.prototype = {
 
     create: function () {
 

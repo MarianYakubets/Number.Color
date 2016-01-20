@@ -1,4 +1,4 @@
-BasicGame.Game = function (game) {
+NumberColor.Game = function (game) {
     this.game; //	a reference to the currently running game
     this.add; //	used to add sprites, text, groups, etc
     this.camera; //	a reference to the game camera
@@ -17,7 +17,7 @@ BasicGame.Game = function (game) {
 
 };
 
-BasicGame.Game.prototype = {
+NumberColor.Game.prototype = {
 
     create: function () {
         var grid = new Grid(this.game);
@@ -28,7 +28,7 @@ BasicGame.Game.prototype = {
 
         //	Do some nice funky main menu effect here
 
-    },
+    }
 
 
 };

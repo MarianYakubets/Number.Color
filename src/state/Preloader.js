@@ -1,4 +1,4 @@
-BasicGame.Preloader = function (game) {
+NumberColor.Preloader = function (game) {
 
     this.background = null;
     this.preloadBar = null;
@@ -7,7 +7,7 @@ BasicGame.Preloader = function (game) {
 
 };
 
-BasicGame.Preloader.prototype = {
+NumberColor.Preloader.prototype = {
 
     preload: function () {
 
