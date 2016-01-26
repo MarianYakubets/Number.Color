@@ -21,7 +21,8 @@ NumberColor.Game.prototype = {
 
     create: function () {
         var grid = new Grid(this.game);
-        grid.draw();
+        grid.drawTiles();
+        grid.drawFigures();
     },
 
     update: function () {

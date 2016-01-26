@@ -5,19 +5,19 @@ function FigureController (figures){
 
 	function getFigure(pos){
 
-	};
+	}
 
 	function canMoveFigureTo(dir){
 
-	};
+	}
 
 	function canMoveTileTo(dir){
 
-	};
+	}
 
 	function moveFigure(dir){
 
-	};
+	}
 
 
 
