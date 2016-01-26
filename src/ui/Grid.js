@@ -24,9 +24,16 @@ function Grid(game) {
         figures.forEach(function (f) {
             var figure = drawFigure(f);
             figure.position.set(size * f.pos.x, size * f.pos.y);
+            game.input.onTap.add(move(figure), figure);
             figuresGroup.add(figure);
         });
     };
+
+    function move(figure) {
+        return function () {
+            figure.position.set(0, 0);
+        }
+    }
 
     function drawFigure(figure) {
         var figureGroup = game.add.group();
