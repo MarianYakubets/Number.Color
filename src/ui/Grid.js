@@ -1,6 +1,6 @@
 function Grid(game) {
     var tiles = [];
-    var figures = [new Figure([new Tile(TILE_TYPE.BLUE, new Pos(0, 0)), new Tile(TILE_TYPE.BLUE, new Pos(0, 1))], new Pos(2, 2))];
+    var figures = [new Figure([new Tile(TILE_TYPE.BLUE, {x: 0, y: 0}), new Tile(TILE_TYPE.BLUE, {x: 0, y: 1})], new Pos(2, 2))];
     var size = 64;
     var width = 4;
     var height = 4;
@@ -31,7 +31,8 @@ function Grid(game) {
 
     function move(figure) {
         return function () {
-            figure.position.set(0, 0);
+            // figure.position.set(size * 1, size * 2).to({x:});
+            game.add.tween(figure).to({x: size, y: size * 2}, 200, Phaser.Easing.Linear.None, true);
         }
     }
 
