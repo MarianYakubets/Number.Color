@@ -26,12 +26,18 @@ function Grid(game) {
             var figure = drawFigure(f);
             var figureTouch = touch(figure);
             figure.position.set(size * f.pos.x, size * f.pos.y);
+            figuresGroup.add(figure);
 
             game.input.onTap.add(figureTouch.tap, figure);
             game.input.onHold.add(figureTouch.move, figure);
             game.input.onUp.add(figureTouch.up, figure);
+            game.input.onDown.add(figureTouch.down, figure);
 
-            figuresGroup.add(figure);
+            game.input.addMoveCallback(figureTouch.move, figure);
+
+            /*figure.inputEnabled = true;
+            figure.input.enableDrag();
+            figure.input.enableSnap(size, size, false, true);*/
         });
     };
 
@@ -42,10 +48,13 @@ function Grid(game) {
             },
             move: function () {
                 console.log('move');
-
+                game.add.tween(figure).to({x: size, y: size * 2}, 200, Phaser.Easing.Linear.None, true);
             },
             up: function () {
                 console.log('up');
+            },
+            down: function () {
+                console.log('down');
             }
         };
 
